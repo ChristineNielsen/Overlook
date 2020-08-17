@@ -47,7 +47,7 @@
 
        <div class="fluid-grid">
               <% værelser.items.slice(0, 3).forEach(function(item) {
-              %> <a href="#"><div class="card"> <img src="<%= item.images[0].image %>" alt="">
+              %> <a href="/room_type/<%= item.id %>"><div class="card"> <img src="<%= item.images[0].image %>" alt="">
               <h3><%= item.room_title %></h3>
               <p class="summ"> <%= item.description %></p>
               </div> </a>
