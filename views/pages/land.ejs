@@ -1,0 +1,50 @@
+<% include ../partials/header %>    
+
+<link rel="stylesheet" href="/assets/css/land.css">
+
+<main>
+
+<div class="grid-container-full">
+    <div class="land1">
+        <img src="<%= land.item.image %>" alt="">
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 971 113.11"><defs><style>.cls-1{fill:red;}.cls-2{font-size:39px;fill:#fff;font-family:OpenSans, Open Sans;}</style></defs><path class="cls-1" d="M547.5,491.6V412.8h798V416a75.69,75.69,0,0,1-75.61,75.6Z" transform="translate(-547 -379)"/><path class="cls-1" d="M1345,413.3V416a75.2,75.2,0,0,1-75.11,75.11H548V413.3h797m1-1H547v79.81h722.89A76.11,76.11,0,0,0,1346,416v-3.7Z" transform="translate(-547 -379)"/><path d="M547.5,462.5v-83h888v7.4a75.7,75.7,0,0,1-75.61,75.6Z" transform="translate(-547 -379)"/><path d="M1435,380v6.89A75.19,75.19,0,0,1,1359.89,462H548V380h887m1-1H547v84h812.89A76.1,76.1,0,0,0,1436,386.89V379Z" transform="translate(-547 -379)"/><text class="cls-2" transform="translate(16.34 55.72)">HOTELLER &amp; DESTINATIONER</text></svg>
+    </div>
+</div>
+<div class="grid-container">
+    <div class="land2">
+        <nav">
+                <ul>
+                <li><a href="/land/1">Danmark</a></li>
+                <li><a href="/land/2">Sverige</a></li>
+                <li><a href="/land/4">Norge</a></li>
+                <li><a href="/land/3">Finland</a></li>
+                <li><a href="/land/7">Island</a></li>
+                <li><a href="/land/5">Tyskland</a></li>
+                <li><a href="/land/6">Polen</a></li>
+              </ul>
+            </nav>
+    </div>
+    <div class="land3">
+        <h5> <span class="sti"> Hotel Overlook > Hoteller og Destinationer > <%= land.item.name %></span> </h5> <br>
+        <h2>Vores hoteller i <%= land.item.name %> </h2>
+        <h5><%= land.item.description %></h5>
+    </div>
+    <div class="land4">
+      <h4> Kort over <%= land.item.name %> </h4>
+    </div>
+</div>
+
+
+<div class="fluid-grid">
+        <% by.forEach(function(item) {
+        %> <a href="/by/<%= item.id %>"><div class="card"> <img src="<%= item.image %>" alt="">
+        <h3><%= item.name %></h3>
+        <p class="summ"> <%= item.description %></p>
+        </div> </a>
+        <% }); %>
+ </div>
+
+
+</main>
+    
+<% include ../partials/footer %>

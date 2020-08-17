@@ -1,0 +1,58 @@
+<% include ../partials/header %> 
+
+
+<link rel="stylesheet" href="/assets/css/rooms.css">
+
+<main>
+
+    <div class="grid-container-full">
+        <div class="værelser1">
+            <img src="/images/slider2.jpg" alt="">
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 971 113.11"><defs><style>.cls-1{fill:red;}.cls-2{font-size:39px;fill:#fff;font-family:OpenSans, Open Sans;}</style></defs><path class="cls-1" d="M547.5,491.6V412.8h798V416a75.69,75.69,0,0,1-75.61,75.6Z" transform="translate(-547 -379)"/><path class="cls-1" d="M1345,413.3V416a75.2,75.2,0,0,1-75.11,75.11H548V413.3h797m1-1H547v79.81h722.89A76.11,76.11,0,0,0,1346,416v-3.7Z" transform="translate(-547 -379)"/><path d="M547.5,462.5v-83h888v7.4a75.7,75.7,0,0,1-75.61,75.6Z" transform="translate(-547 -379)"/><path d="M1435,380v6.89A75.19,75.19,0,0,1,1359.89,462H548V380h887m1-1H547v84h812.89A76.1,76.1,0,0,0,1436,386.89V379Z" transform="translate(-547 -379)"/><text class="cls-2" transform="translate(16.34 55.72)">VÆRELSER</text></svg>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="værelser2">
+            <h5> <span class="sti">Hotel Overlook > Se vores udvalg af værelser</span> </h5> <br>
+            <h2>Se vores udvalg af værelser</h2> 
+            <h5>
+               <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eros elit, condimentum at lacus ut, porta lobortis risus. Curabitur venenatis felis sit amet sapien vehicula, a accumsan orci tincidunt. Sed porta massa sed facilisis dignissim. Cras euismod sem ex, ac egestas purus laoreet finibus. Ut mollis, risus auctor pretium sollicitudin, elit lorem eleifend elit, sit amet suscipit dui erat sit amet dolor. Etiam in nibh facilisis, imperdiet turpis nec, imperdiet ex. Fusce consequat velit in risus posuere commodo. Donec suscipit tellus a consectetur lacinia.</p> <br>
+
+<p> In hac habitasse platea dictumst. Quisque maximus sem massa, at ornare metus volutpat et. Maecenas dapibus est sem, eget fringilla erat sollicitudin ut. Proin velit enim, aliquam id lobortis in, ullamcorper sed lectus. Aenean ultricies quam ut vulputate varius. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec consectetur eleifend mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sit amet faucibus nibh. Cras laoreet odio urna, ac facilisis felis faucibus vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla facilisi. Nullam congue dignissim vehicula.</p> <br>
+
+<p> Phasellus malesuada augue eget hendrerit tincidunt. Duis finibus ornare est iaculis ultricies. Quisque dictum vitae arcu ac euismod. Sed hendrerit erat neque, et consectetur augue maximus eu. Sed at risus sed nisi auctor lobortis sed quis diam. Vivamus posuere maximus lacus et porttitor. Curabitur non sagittis sem. Proin maximus laoreet faucibus. Morbi ut maximus orci, quis vulputate eros.</p> <br>
+
+<p> Aliquam blandit leo ex, a facilisis ante pharetra in. Ut eget orci fermentum, egestas elit sed, rhoncus dolor. Vestibulum tempus dolor ex, vitae semper nisi sodales sed. Donec imperdiet velit malesuada arcu sollicitudin molestie. Phasellus non est eu ligula dignissim pellentesque. Proin euismod mi sit amet ligula iaculis, sed lobortis enim imperdiet. Maecenas maximus neque pellentesque nisi porta, eget pellentesque mauris dictum. Donec fringilla, nunc nec iaculis luctus, lacus diam faucibus dui, vitae rhoncus tortor nulla at dui. Cras commodo massa mi, sed congue risus accumsan ac. Fusce dui lorem, porta at pellentesque et, lobortis eu odio.</p> <br>
+
+<p> Quisque nec mattis arcu. Donec rhoncus ut risus sit amet tempor.</p>
+            </h5>
+  
+        <div class="grid">
+            <div class="pic1"> 
+                <img src="/images/overlook-potsdamer-platz.jpg" alt="">
+            </div>
+            <div class="pic2">
+                <img src="/images/overlook-rauma.jpg" alt="">
+            </div> 
+            <div class="pic3">
+                <img src="/images/overlook-portalen.jpg" alt="">
+             </div> 
+            <div class="pic4">
+                <img src="/images/overlook-silkeborg.jpg" alt="">
+            </div> 
+        </div>
+     </div>
+
+        <div class="værelser3">
+          <h4> <span class="bold">Værelsestyper:</span>
+            <% rooms.items.forEach(function(item) {
+                %> <a href="/room_type/<%= item.id %>"> <img src="<%= item.images[0].image %>" alt="">
+                <%= item.room_title %> </a>
+                <% }); %> </h4>
+        </div>
+    </div>
+
+
+</main>
+    
+<% include ../partials/footer %>

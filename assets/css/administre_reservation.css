@@ -1,0 +1,143 @@
+/*BLOCKS START*/
+.admin1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.admin1 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-height: 30vw;
+}
+
+.admin2 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-column: 1 / 10;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.admin2 h2 {
+  margin-bottom: calc(5vw - 25*((100vw - 320px) / 680));
+}
+
+.admin2 h5 {
+  width: 95%;
+  color: #7D7D7D;
+  padding-bottom: 1vw;
+  margin-top: 1vw;
+}
+
+.admin2 .border-bottom {
+  border-bottom: dashed #ADADAD;
+}
+
+.admin3 {
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 3;
+  grid-column: 10 / 13;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  border-left: solid #ADADAD;
+}
+
+.admin3 h4 {
+  margin: 2vw 0 0 2vw;
+  font-size: calc(11px + 1*((100vw - 320px) / 680));
+  line-height: calc(24px + 1*((100vw - 320px) / 680));
+}
+
+.admin3 h4 .bold {
+  font-weight: 900;
+  color: black;
+  font-size: calc(14px + 1*((100vw - 320px) / 680));
+  padding-bottom: 1vw;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  max-width: 95%;
+  margin: 1vw 1vw 2vw 0;
+  background-color: white;
+  padding: 1vw;
+}
+
+.bestilling1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.bestilling1 h5 {
+  color: #7D7D7D;
+}
+
+.bestilling2 {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 3;
+  grid-column: 5 / 8;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.bestilling2 h5 {
+  color: #7D7D7D;
+}
+
+.bestilling3 {
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 3;
+  grid-column: 8 / 11;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.bestilling3 h5 {
+  color: #7D7D7D;
+}
+
+.bestilling4 {
+  -ms-grid-column: 11;
+  -ms-grid-column-span: 2;
+  grid-column: 11 / 13;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.bestilling4 h5 {
+  color: #7D7D7D;
+}
+
+.bestilling4 h4 {
+  color: red;
+  cursor: pointer;
+}
+
+/*BLOCKS END*/
+@media only screen and (max-width: 620px) {
+  .admin2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .admin3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+}
+/*# sourceMappingURL=administre_reservation.css.map */

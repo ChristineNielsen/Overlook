@@ -1,0 +1,136 @@
+/*BLOCKS START*/
+.by1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.by1 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-height: 30vw;
+}
+
+.by1 svg {
+  position: absolute;
+  top: calc(13% + 90*((100vw - 320px) / 680));
+  left: calc(10% + 1*((100vw - 320px) / 680));
+  z-index: 4;
+  width: calc(54% + 1*((100vw - 320px) / 680));
+  opacity: 0.8;
+}
+
+.by2 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  text-align: center;
+  -webkit-box-shadow: 0px 17px 8px -13px #919191;
+  box-shadow: 0px 17px 8px -13px #919191;
+  height: 3vw;
+}
+
+.by2 li {
+  display: inline-block;
+}
+
+.by2 li a {
+  color: black;
+  position: relative;
+  padding: 0.5vw;
+  cursor: pointer;
+  font-size: calc(0.8em + 2*((100vw - 320px) / 680));
+}
+
+.by3 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-column: 1 / 10;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  border-bottom: dashed #ADADAD;
+}
+
+.by3 h2 {
+  margin-bottom: 1vw;
+}
+
+.by3 h5 {
+  width: 95%;
+  color: #7D7D7D;
+  padding-bottom: 2vw;
+  margin-top: 2vw;
+}
+
+.by3 h5 .sti {
+  font-weight: 600;
+  color: black;
+}
+
+.by4 {
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 3;
+  grid-column: 10 / 13;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  border-left: solid #ADADAD;
+}
+
+.by4 h4 {
+  margin: 2vw 0 0 1vw;
+}
+
+/*BLOCKS END*/
+/*CARD BEGIN*/
+.card {
+  text-align: left;
+  color: black;
+  margin: 0 auto;
+}
+
+.card img {
+  width: 100%;
+  height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card h3 {
+  font-size: calc(20px + 3  * ((100vw - 320px) / 680));
+  margin-bottom: calc(5vw - 25*((100vw - 320px) / 680));
+  text-align: center;
+}
+
+.card h3 span {
+  color: gold;
+}
+
+.card h3 img {
+  width: calc(7% + 5*((100vw - 320px) / 680));
+  height: calc(100% + 2*((100vw - 320px) / 680));
+  z-index: 7;
+}
+
+/*CARD END*/
+@media only screen and (max-width: 620px) {
+  .by3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .by4 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+}
+/*# sourceMappingURL=by.css.map */

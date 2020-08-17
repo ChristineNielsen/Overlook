@@ -1,0 +1,85 @@
+<% include ../partials/header %>   
+
+<link rel="stylesheet" href="/assets/css/værelse.css">
+
+<main>
+
+    <div class="grid-container-full">
+        <div class="værelse1">
+            <img src="<%= hotel.item.image %>" alt="">
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 971 113.11"><defs><style>.cls-1{fill:red;}.cls-2{font-size:39px;fill:#fff;font-family:OpenSans, Open Sans;}</style></defs><path class="cls-1" d="M547.5,491.6V412.8h798V416a75.69,75.69,0,0,1-75.61,75.6Z" transform="translate(-547 -379)"/><path class="cls-1" d="M1345,413.3V416a75.2,75.2,0,0,1-75.11,75.11H548V413.3h797m1-1H547v79.81h722.89A76.11,76.11,0,0,0,1346,416v-3.7Z" transform="translate(-547 -379)"/><path d="M547.5,462.5v-83h888v7.4a75.7,75.7,0,0,1-75.61,75.6Z" transform="translate(-547 -379)"/><path d="M1435,380v6.89A75.19,75.19,0,0,1,1359.89,462H548V380h887m1-1H547v84h812.89A76.1,76.1,0,0,0,1436,386.89V379Z" transform="translate(-547 -379)"/><text class="cls-2" transform="translate(16.34 55.72)">HOTELLER &amp; DESTINATIONER</text></svg>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="værelse2">
+            <h5> <span class="sti">Hotel Overlook > Hoteller og Destinationer > <%= hotel.item.city_name %> > <%= hotel.item.title %></span> </h5> <br>
+            <h2><%= hotel.item.title %>
+                <span> <%= hotel.item.num_stars %>x</span> <img src="/images/star-gold-clip-art-gold-stars-png-download-1024947-free-star-transparent-background-png-1024_947.png" alt="">   </h2> 
+            <h5 class="border-bottom"><%= hotel.item.description %></h5>
+    
+            <p class="title">Vores værelser</p>
+    
+       
+        <div class="grid">
+            <div class="room1">
+                <img src="<%= room.item.images[0].image %>" alt="">
+            </div>
+            <div class="room2">
+                <h2><%= room.item.title %></h2> <br>
+                <h5> <%= room.item.area %>  Plads til <%= room.item.num_persons %> personer </h5> 
+            </div> 
+            <div class="room3">
+                <img src="<%= room.item.images[0].image %>" alt="">
+            </div> 
+            <div class="room4">
+                <img src="<%= room.item.images[0].image %>" alt="">
+            </div> 
+            <div class="room5">
+                <h5> <%= room.item.description %></h5> 
+                <h3>Værelset er udstyret med</h3>
+            </div> 
+            <div class="room6">
+                <% room.item.facilities.slice(0, 3).forEach(function(item) {
+                    %> <h5> <i class="fa fa-check" style="color:green"></i> <%= item.title %> 
+                    <% }); %></h5>
+            </div> 
+            <div class="room7">
+                <% room.item.facilities.slice(3, 6).forEach(function(item) {
+                    %> <h5> <i class="fa fa-check" style="color:green"></i> <%= item.title %>
+                    <% }); %> </h5>
+            </div> 
+            <div class="room8">
+                <% room.item.facilities.slice(6, 9).forEach(function(item) {
+                    %> <h5> <i class="fa fa-check" style="color:green"></i> <%= item.title %>
+                    <% }); %> </h5>
+            </div> 
+            <div class="room9">
+                <h5>NORMAL Pris - inkl. morgenmad</h5>
+                <h6>Kan ikke ændres eller afbestilles</h6>
+                <h2><%= room.item.day_price_normal %> DKK/nat</h2>
+            </div> 
+            <div class="room10">
+                <h5>FLEX Pris - inkl. morgenmad</h5>
+                <h6>Kan ændres eller afbestilles</h6>
+                <h2><%= room.item.day_price_flex %> DKK/nat</h2> 
+            </div> 
+            <div class="room11">
+                <button>
+                    <a href="/reservation/<%= room.item.id %>/<%= hotel.item.id %>">BOOK VÆRELSE</a>
+                </button>
+            </div>
+        </div>
+     </div>
+
+        <div class="værelse3">
+          <h4> <p> <span class="bold">Hotel informationer:</span>  <br> <%= hotel.item.address %> <br> <%= hotel.item.phone %> </p> <br>
+        <p> <span class="bold">Faciliteter:</span>  <br>  <% hotel.item.facilities.forEach(function(item) {
+            %> <p> <%= item.title %> </p>
+            <% }); %> </p></h4>
+        </div>
+    </div>
+
+
+</main>
+    
+<% include ../partials/footer %>

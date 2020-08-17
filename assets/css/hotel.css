@@ -1,0 +1,169 @@
+/*BLOCKS START*/
+.hotel1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.hotel1 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-height: 30vw;
+}
+
+.hotel1 svg {
+  position: absolute;
+  top: calc(13% + 90*((100vw - 320px) / 680));
+  left: calc(10% + 1*((100vw - 320px) / 680));
+  z-index: 4;
+  width: calc(54% + 1*((100vw - 320px) / 680));
+  opacity: 0.8;
+}
+
+.hotel2 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  text-align: center;
+  -webkit-box-shadow: 0px 17px 8px -13px #919191;
+  box-shadow: 0px 17px 8px -13px #919191;
+  height: 3vw;
+}
+
+.hotel2 li {
+  display: inline-block;
+}
+
+.hotel2 li a {
+  color: black;
+  position: relative;
+  padding: 0.5vw;
+  cursor: pointer;
+  font-size: calc(0.8em + 2*((100vw - 320px) / 680));
+}
+
+.hotel3 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-column: 1 / 10;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.hotel3 h2 {
+  margin-bottom: calc(5vw - 25*((100vw - 320px) / 680));
+}
+
+.hotel3 h2 span {
+  color: gold;
+  margin-left: calc(20vw + 1*((100vw - 320px) / 680));
+}
+
+.hotel3 h2 img {
+  width: calc(8% - 4*((100vw - 320px) / 680));
+}
+
+.hotel3 h5 {
+  width: 95%;
+  color: #7D7D7D;
+  padding-bottom: 2vw;
+  margin-top: 2vw;
+}
+
+.hotel3 h5 .sti {
+  font-weight: 600;
+  color: black;
+}
+
+.hotel3 .border-bottom {
+  border-bottom: dashed #ADADAD;
+}
+
+.hotel3 .title {
+  margin: 2vw 0 2vw 2vw;
+  font-size: 1.5em;
+}
+
+.hotel4 {
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 3;
+  grid-column: 10 / 13;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  border-left: solid #ADADAD;
+}
+
+.hotel4 h4 {
+  margin: 2vw 0 0 2vw;
+  color: #7D7D7D;
+  font-size: calc(12px + 1*((100vw - 320px) / 680));
+  line-height: calc(24px + 1*((100vw - 320px) / 680));
+}
+
+.hotel4 h4 .bold {
+  font-weight: 900;
+  color: black;
+  font-size: calc(14px + 1*((100vw - 320px) / 680));
+  padding-bottom: 1vw;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  max-width: 90%;
+  margin: 1vw auto 2vw auto;
+  background-color: white;
+  padding: 1vw;
+}
+
+.card1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.card2 {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 8;
+  grid-column: 5 / 13;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  margin-left: 2vw;
+}
+
+.card2 h5 {
+  margin-top: 0;
+}
+
+.card2 .price {
+  text-align: right;
+  font-weight: 600;
+}
+
+/*BLOCKS END*/
+@media only screen and (max-width: 620px) {
+  .hotel3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .hotel4 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+}
+/*# sourceMappingURL=hotel.css.map */

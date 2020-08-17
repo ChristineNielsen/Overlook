@@ -1,0 +1,54 @@
+<% include ../partials/header %>   
+
+<link rel="stylesheet" href="/assets/css/administre_reservation.css">
+
+<main>
+
+    <div class="grid-container-full">
+        <div class="admin1">
+            <img src="/images/slider2.jpg" alt="">
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="admin2">
+            <h5> <span class="sti">Hotel Overlook > Administrer reservationer </h5> <br>
+            <h2>Administrer reservationer</h2>
+            <h5 class="border-bottom">Her kan du se og afbestille dine reservationer</h5>
+
+            <% reservation.items.forEach(function(item) {
+                %> 
+            <div class="grid"> 
+                <div class="bestilling1">
+                    <h5>Hotel og værelsestype</h5>
+                    <h4><%= item.hotel_title %> <br>
+                        <%= item.room_title %></h4>
+                </div>
+                <div class="bestilling2">
+                    <h5>Dato</h5>
+                    <h4><%= item.checkin_date %> <br>
+                        <%= item.checkout_date %></h4>
+                </div>
+                <div class="bestilling3">
+                    <h5>Antal personer</h5>
+                    <h4> <%= item.num_persons %></h4>
+                </div>
+                <div class="bestilling4">
+                    <h5>Handling</h5>
+                   <h4 onclick="deleteComments('<%= item.id %>')">Slet </h4>
+                </div>
+             </div>
+             <% }); %>
+              </div> 
+            
+        <div class="admin3">
+            <h4><span class="bold">Dine oplysninger</span> <br>
+            Du er logget ind som <%= reservation.items[0].name %> </h4>
+          </div>
+      </div>
+    
+
+</main>
+
+<script src="/assets/js/administre_reservation.js"></script>
+
+<% include ../partials/footer %>

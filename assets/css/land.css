@@ -1,0 +1,136 @@
+/*BLOCKS START*/
+.land1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.land1 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-height: 30vw;
+}
+
+.land1 svg {
+  position: absolute;
+  top: calc(13% + 90*((100vw - 320px) / 680));
+  left: calc(10% + 1*((100vw - 320px) / 680));
+  z-index: 4;
+  width: calc(54% + 1*((100vw - 320px) / 680));
+  opacity: 0.8;
+}
+
+.land2 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  text-align: center;
+  -webkit-box-shadow: 0px 17px 8px -13px #919191;
+  box-shadow: 0px 17px 8px -13px #919191;
+  height: 3vw;
+}
+
+.land2 li {
+  display: inline-block;
+}
+
+.land2 li a {
+  color: black;
+  position: relative;
+  padding: 0.5vw;
+  cursor: pointer;
+  font-size: calc(0.8em + 2*((100vw - 320px) / 680));
+}
+
+.land3 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-column: 1 / 10;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  border-bottom: dashed #ADADAD;
+}
+
+.land3 h2 {
+  margin-bottom: 1vw;
+}
+
+.land3 h5 {
+  width: 95%;
+  color: #7D7D7D;
+  padding-bottom: 2vw;
+  margin-top: 2vw;
+}
+
+.land3 h5 .sti {
+  font-weight: 600;
+  color: black;
+}
+
+.land4 {
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 3;
+  grid-column: 10 / 13;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  border-left: solid #ADADAD 1px;
+}
+
+.land4 h4 {
+  margin: 2vw 0 0 1vw;
+}
+
+/*BLOCKS END*/
+/*CARD BEGIN*/
+.card {
+  text-align: left;
+  color: black;
+  margin: 0 auto;
+}
+
+.card img {
+  width: 100%;
+  height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card h3 {
+  height: calc(23px + 1  * ((100vw - 320px) / 680));
+  font-size: calc(20px + 3  * ((100vw - 320px) / 680));
+}
+
+.summ {
+  overflow: hidden;
+  font-size: 0.8em;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+  margin-top: 1vw;
+}
+
+/*CARD END*/
+@media only screen and (max-width: 620px) {
+  .land3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .land4 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+}
+/*# sourceMappingURL=land.css.map */

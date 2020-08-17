@@ -1,0 +1,277 @@
+@charset "UTF-8";
+/*BLOCKS START*/
+.værelse1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.værelse1 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-height: 30vw;
+}
+
+.værelse1 svg {
+  position: absolute;
+  top: calc(13% + 90*((100vw - 320px) / 680));
+  left: calc(10% + 1*((100vw - 320px) / 680));
+  z-index: 4;
+  width: calc(54% + 1*((100vw - 320px) / 680));
+  opacity: 0.8;
+}
+
+.værelse2 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-column: 1 / 10;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.værelse2 h2 {
+  margin-bottom: calc(5vw - 25*((100vw - 320px) / 680));
+}
+
+.værelse2 h2 span {
+  color: gold;
+  margin-left: calc(20vw + 1*((100vw - 320px) / 680));
+  font-size: calc(1.2em + 4*((100vw - 320px) / 680));
+}
+
+.værelse2 h2 img {
+  width: calc(8% - 4*((100vw - 320px) / 680));
+}
+
+.værelse2 h5 {
+  width: 95%;
+  color: #7D7D7D;
+  padding-bottom: 2vw;
+  margin-top: 1vw;
+}
+
+.værelse2 h5 .sti {
+  font-weight: 600;
+  color: black;
+}
+
+.værelse2 .border-bottom {
+  border-bottom: dashed #ADADAD;
+}
+
+.værelse3 {
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 3;
+  grid-column: 10 / 13;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  border-left: solid #ADADAD;
+}
+
+.værelse3 h4 {
+  margin: 2vw 0 0 2vw;
+  color: #7D7D7D;
+  font-size: calc(12px + 1*((100vw - 320px) / 680));
+  line-height: calc(24px + 1*((100vw - 320px) / 680));
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  max-width: 90%;
+  margin: 1vw auto 2vw auto;
+  background-color: white;
+  padding: 1vw;
+  grid-gap: 5px;
+}
+
+.grid .room1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.grid .room2 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-column: 1 / 9;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.grid .room3 {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 2;
+  grid-column: 9 / 11;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.grid .room4 {
+  -ms-grid-column: 11;
+  -ms-grid-column-span: 2;
+  grid-column: 11 / 13;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.grid .room5 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 3;
+  grid-row: 3;
+}
+
+.grid .room6 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+  -ms-grid-row: 4;
+  grid-row: 4;
+  margin-bottom: 2vw;
+}
+
+.grid .room6 h5 {
+  padding-bottom: 0;
+  font-size: calc(0.5em + 4 *((100vw - 320px) / 680));
+}
+
+.grid .room7 {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 4;
+  grid-column: 5 / 9;
+  -ms-grid-row: 4;
+  grid-row: 4;
+  margin-bottom: 2vw;
+}
+
+.grid .room7 h5 {
+  padding-bottom: 0;
+  font-size: calc(0.5em + 4 *((100vw - 320px) / 680));
+}
+
+.grid .room8 {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 4;
+  grid-column: 9 / 13;
+  -ms-grid-row: 4;
+  grid-row: 4;
+  margin-bottom: 2vw;
+}
+
+.grid .room8 h5 {
+  padding-bottom: 0;
+  font-size: calc(0.5em + 4 *((100vw - 320px) / 680));
+}
+
+.grid .room9 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-column: 1 / 7;
+  -ms-grid-row: 5;
+  grid-row: 5;
+  background-color: #EBEBEB;
+  max-width: 95%;
+  margin-left: 0.5vw;
+}
+
+.grid .room9 h2 {
+  padding-left: calc(7px + 3 *((100vw - 320px) / 680));
+  font-size: calc(1.2em + 5 *((100vw - 320px) / 680));
+}
+
+.grid .room9 h5 {
+  padding-left: calc(7px + 3 *((100vw - 320px) / 680));
+}
+
+.grid .room9 h6 {
+  padding-left: calc(7px + 3 *((100vw - 320px) / 680));
+}
+
+.grid .room10 {
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 6;
+  grid-column: 7 / 13;
+  -ms-grid-row: 5;
+  grid-row: 5;
+  background-color: #EBEBEB;
+  margin-left: 0.5vw;
+  max-width: 95%;
+}
+
+.grid .room10 h2 {
+  padding-left: calc(7px + 3 *((100vw - 320px) / 680));
+  font-size: calc(1.2em + 5 *((100vw - 320px) / 680));
+}
+
+.grid .room10 h5 {
+  padding-left: calc(7px + 3 *((100vw - 320px) / 680));
+}
+
+.grid .room10 h6 {
+  padding-left: calc(7px + 3 *((100vw - 320px) / 680));
+}
+
+.grid .room11 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 6;
+  grid-row: 6;
+  text-align: center;
+}
+
+.grid .room11 button {
+  width: calc(35% - 15 *((100vw - 320px) / 680));
+  padding: calc(10px + 3 *((100vw - 320px) / 680));
+  margin-top: calc(10px + 3 *((100vw - 320px) / 680));
+  cursor: pointer;
+  background-color: red;
+  border: none;
+}
+
+.grid .room11 button a {
+  color: white;
+}
+
+/*BLOCKS END*/
+.title {
+  margin: 2vw 0 2vw 2vw;
+  font-size: 1.5em;
+}
+
+.bold {
+  font-weight: 900;
+  color: black;
+  font-size: calc(14px + 1*((100vw - 320px) / 680));
+  padding-bottom: 1vw;
+}
+
+@media only screen and (max-width: 620px) {
+  .værelse2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .værelse3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  .grid {
+    max-width: 100%;
+  }
+}
+/*# sourceMappingURL=værelse.css.map */

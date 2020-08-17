@@ -1,0 +1,66 @@
+<% include ../partials/header %>   
+
+<link rel="stylesheet" href="/assets/css/hotel.css">
+
+<main>
+
+<div class="grid-container-full">
+    <div class="hotel1">
+        <img src="<%= hotel.item.image %>" alt="">
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 971 113.11"><defs><style>.cls-1{fill:red;}.cls-2{font-size:39px;fill:#fff;font-family:OpenSans, Open Sans;}</style></defs><path class="cls-1" d="M547.5,491.6V412.8h798V416a75.69,75.69,0,0,1-75.61,75.6Z" transform="translate(-547 -379)"/><path class="cls-1" d="M1345,413.3V416a75.2,75.2,0,0,1-75.11,75.11H548V413.3h797m1-1H547v79.81h722.89A76.11,76.11,0,0,0,1346,416v-3.7Z" transform="translate(-547 -379)"/><path d="M547.5,462.5v-83h888v7.4a75.7,75.7,0,0,1-75.61,75.6Z" transform="translate(-547 -379)"/><path d="M1435,380v6.89A75.19,75.19,0,0,1,1359.89,462H548V380h887m1-1H547v84h812.89A76.1,76.1,0,0,0,1436,386.89V379Z" transform="translate(-547 -379)"/><text class="cls-2" transform="translate(16.34 55.72)">HOTELLER &amp; DESTINATIONER</text></svg>
+        <div>
+
+        </div>
+    </div>
+</div>
+<div class="grid-container">
+    <div class="hotel2">
+        <nav">
+                <ul>
+                <li><a href="/land/1">Danmark</a></li>
+                <li><a href="/land/2">Sverige</a></li>
+                <li><a href="/land/4">Norge</a></li>
+                <li><a href="/land/3">Finland</a></li>
+                <li><a href="/land/7">Island</a></li>
+                <li><a href="/land/5">Tyskland</a></li>
+                <li><a href="/land/6">Polen</a></li>
+              </ul>
+            </nav>
+    </div>
+    <div class="hotel3">
+        <h5> <span class="sti">Hotel Overlook > Hoteller og Destinationer > <%= hotel.item.city_name %> > <%= hotel.item.title %></span> </h5> <br>
+        <h2><%= hotel.item.title %> 
+            <span> <%= hotel.item.num_stars %>x</span> <img src="/images/star-gold-clip-art-gold-stars-png-download-1024947-free-star-transparent-background-png-1024_947.png" alt="">   </h2> 
+        <h5 class="border-bottom"><%= hotel.item.description %></h5>
+
+        <p class="title">Vores værelser</p>
+
+   
+        <% room.forEach(function(item) {
+        %>
+    <div class="grid">
+        <div class="card1">
+            <a href="/room/<%= item.id %>/<%= item.hotel_id %>"> <img src="<%= item.images[0].image %>" alt=""></a>
+        </div> 
+        <div class="card2">
+        <h3><%= item.room_title %> </h3> <br>
+        <h5> <p> <%= item.area %>  Plads til <%= item.num_persons %> personer</p> <br> 
+        <p> <%= item.description %></p> </h5>
+        <h3 class="price"> Fra <%= item.day_price_normal %> </h3>
+        </div> 
+    </div>
+        <% }); %>
+    </div>
+    <div class="hotel4">
+      <h4> <p> <span class="bold">Hotel informationer:</span>  <br> <%= hotel.item.address %> <br> <%= hotel.item.phone %> </p> <br>
+    <p> <span class="bold">Faciliteter:</span>  <br>  <% hotel.item.facilities.forEach(function(item) {
+        %> <p> <%= item.title %> </p>
+        <% }); %> </p></h4>
+    </div>
+</div>
+
+
+</main>
+    
+<% include ../partials/footer %>
+    

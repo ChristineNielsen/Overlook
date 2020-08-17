@@ -1,0 +1,106 @@
+<% include ../partials/header %>   
+
+<link rel="stylesheet" href="/assets/css/reservation.css">
+
+<main>
+    <div class="grid-container-full">
+        <div class="reservation1">
+            <img src="/images/slider1.jpg" alt="">
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 971 113.11"><defs><style>.cls-1{fill:red;}.cls-2{font-size:39px;fill:#fff;font-family:OpenSans, Open Sans;}</style></defs><path class="cls-1" d="M547.5,491.6V412.8h798V416a75.69,75.69,0,0,1-75.61,75.6Z" transform="translate(-547 -379)"/><path class="cls-1" d="M1345,413.3V416a75.2,75.2,0,0,1-75.11,75.11H548V413.3h797m1-1H547v79.81h722.89A76.11,76.11,0,0,0,1346,416v-3.7Z" transform="translate(-547 -379)"/><path d="M547.5,462.5v-83h888v7.4a75.7,75.7,0,0,1-75.61,75.6Z" transform="translate(-547 -379)"/><path d="M1435,380v6.89A75.19,75.19,0,0,1,1359.89,462H548V380h887m1-1H547v84h812.89A76.1,76.1,0,0,0,1436,386.89V379Z" transform="translate(-547 -379)"/><text class="cls-2" transform="translate(16.34 55.72)">RESERVATION</text></svg>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="reservation2">
+            <h5> <span class="sti"> Hotel Overlook > Reservation > Reserver dit foretrukne værelse</span> </h5> <br>
+            <h2>Reserver dit foretrukne værelse </h2>
+        </div>
+        <div class="reservation3">
+          <h4> Betingelser </h4> <br>
+          <h5>
+              <p> <i class="fa fa-check" style="color:green"></i> Reduceret pris - spar op til 25%.</p>
+              <p> <i class="fa fa-check" style="color:green"></i>Kan kun books online via Overlook website og app.</p> 
+              <p> <i class="fa fa-check" style="color:green"></i>Bestil helt op til og med ankomstdagen. </p>
+              <p> <i class="fa fa-check" style="color:green"></i>Bookinger tilbagebetales ikke og kan ikke ændres eller annulleres. </p>
+              <p> <i class="fa fa-check" style="color:green"></i>Beløbet debiteres kreditkort på reservationstidspunktet. </p>
+              <p> <i class="fa fa-check" style="color:green"></i>Morgenmad er inkluderet.</p>
+          </h5>
+        </div>
+    </div>
+    
+            <form method="POST" id="form">
+                <div class="grid-container">
+                <div class="form1">
+                    <label id="hotel_id" for="destination">Destination/Hotel: <%= hotel.item.title %></label>
+                    <select id="destination">
+                        <option value="<%= hotel.item.id %>">Vælg køn</option>
+                    </select> 
+                </div>
+                <div class="form2"> 
+                    <label id="room_id" for="værelsestype">Værelsestype: <%= room.item.title %></label>
+                     <select id="værelsestype">
+                        <option value="<%= room.item.id %>">Vælg køn</option>
+                    </select> 
+               </div>
+               <div class="form3">
+                    <label for="antal">Antal personer:</label>
+                    <select id="antal">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div class="form4">
+                    <label for="pris">Pris klasse:</label>
+                    <input type="radio" id="normal" name="pris" value="0">
+                    <label for="normal">Normal pris</label>
+                    <input type="radio" id="flex" name="pris" value="1">
+                    <label for="flex">Flex pris</label>
+                </div>
+                <div class="form5">
+                    <label for="checkin">Check-in dato:</label>
+                    <input type="date" id="checkin" name="checkin">
+                </div>
+                <div class="form6">
+                    <label for="checkout">Check-out dato:</label>
+                    <input type="date" id="checkout" name="checkout">
+                </div>
+                <div class="form7">
+                    <label for="firstname">Fornavn:</label>
+                    <input type="text" name="firstname" id="firstname" placeholder="Indtast fornavn" value="">
+                </div>
+                <div class="form8">
+                    <label for="lastname">Efternavn:</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Indtast efternavn" value="">
+                </div>
+                <div class="form9">
+                    <label for="email">E-mail adresse:</label>
+                    <input type="email" name="email" id="email" placeholder="Indtast email adresse" value="">
+                </div>
+        
+                <div class="form10">
+                     <label for="comment">Kommentar:</label>
+                     <textarea name="comment" id="comment" placeholder="Indtast kommentar" value="" ></textarea>
+                </div>
+
+                <div class="form11">
+                    <label for="number">Telefon:</label>
+                    <input type="text" name="number" id="number" placeholder="Indtast telefonummer" value="">
+                </div>
+        
+                <div class="form12">
+                        <label for="accept">Accepter:</label>
+                        <input type="checkbox" name="accept" id="accept" value="">
+                    </div>
+            
+                <div class="form13">
+                    <button type="button" id="send">Send</button>
+                    <button type="button" id="annuller">Annuller</button>
+                </div>
+            </form>
+        </div>
+
+</main>
+
+<script src="/assets/js/reservation.js"></script>
+       
+<% include ../partials/footer %>
